@@ -31,23 +31,23 @@
 		    <div class="row">
 		      <div class="col-md-2">
 			<label for="numAttacks">Attacks:</label>
-			<input type="text" class="form-control vals" id="numAttacks" placeholder="" value="" required="">
+			<input type="number" class="form-control vals" id="numAttacks" placeholder="" value="" required="">
 		      </div>
 		      <div class="col-md-2">
 			<label for="numAttacks">To Hit:</label>
-			<input type="text" class="form-control vals" id="toHit" placeholder="" value="" required="">
+			<input type="number" class="form-control vals" id="toHit" placeholder="" value="" required="">
 		      </div>
 		      <div class="col-md-2">
 			<label for="numAttacks">To Wound:</label>
-			<input type="text" class="form-control vals" id="toWound" placeholder="" value="" required="">
+			<input type="number" class="form-control vals" id="toWound" placeholder="" value="" required="">
 		      </div>
 		      <div class="col-md-2">
 			<label for="numAttacks">To Save:</label>
-			<input type="text" class="form-control vals" id="toSave" placeholder="" value="" required="">
+			<input type="number" class="form-control vals" id="toSave" placeholder="" value="" required="">
 		      </div>
 		      <div class="col-md-2">
 			<label for="numAttacks">Damage:</label>
-			<input type="text" class="form-control vals" id="damage" placeholder="" value="" required="">
+			<input type="number" class="form-control vals" id="damage" placeholder="" value="" required="">
 		      </div>
 		      <div class="col-md-2">
 			<label for="numAttacks">Wounds:</label>
@@ -94,7 +94,7 @@
 
             if (tosave == 0) { tosave = 7; }
             
-	    return parseFloat(attacks * ((6-(tohit-1)) / 6) * ((6-(towound-1)) / 6) * (1-((6-(tosave))) / 6) * damage).toFixed(2);
+	    return parseFloat(attacks * ((6-(tohit-1)) / 6) * ((6-(towound-1)) / 6) * (1-((7-(tosave))) / 6) * damage).toFixed(2);
         }
 
 	$('.vals').change(function() {
